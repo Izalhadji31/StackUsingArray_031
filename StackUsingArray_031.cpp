@@ -17,7 +17,7 @@ public:
 	{
 		if (top == 4)
 		{
-			cout << "stack full" << endl;
+			cout << "Stack full" << endl;
 			return;
 		}
 
@@ -33,7 +33,7 @@ public:
 	{
 		if (empty())
 		{
-			cout << "\nstack is empty. cannot pop." << endl;
+			cout << "\nStack is empty. cannot pop." << endl;
 			return;
 		}
 
@@ -68,6 +68,42 @@ int main()
 
 	while (true) 
 	{
-
+		cout << endl;
+		cout << "\n***stack menu***\n";
+		cout << "1. push\n";
+		cout << "2. pop\n";
+		cout << "3.display\n";
+		cout << "4.exit\n";
+		cout << "\nEnter your choiche: ";
+		string input;
+		getline(cin, input);
+		char ch = (input.empty() ? '0' : input[0]);
+		switch (ch)
+		{
+		case '1': 
+		{
+			cout << "\nEnter an element: ";
+			string element;
+			getline(cin, element);
+			s.push(element);
+			break;
+		}
+		case '2':
+			if (s.empty())
+			{
+				cout << "\nStack is empty." << endl;
+				break;
+			}
+			s.pop();
+			break;
+		case '3':
+			s.display();
+			break;
+		case '4':
+			return 0;
+		default:
+			cout << "\nInvalid choiche." << endl;
+			break;
+		}
 	}
 }
