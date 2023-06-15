@@ -52,9 +52,5 @@ public:
 		{
 			cout << "\nstack is empty." << endl;
 		}
-		else
-		{
-
-		}
 	}
 };
