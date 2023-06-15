@@ -18,7 +18,7 @@ public:
 		if (top == 4)
 		{
 			cout << "Stack full" << endl;
-			return;
+			return"";
 		}
 
 		top++;
